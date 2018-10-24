@@ -120,6 +120,7 @@ protected:
     void initMVKShaderConverterContext(SPIRVToMSLConverterContext& _shaderContext,
                                        const VkGraphicsPipelineCreateInfo* pCreateInfo);
 	MTLRenderPipelineDescriptor* getMTLRenderPipelineDescriptor(const VkGraphicsPipelineCreateInfo* pCreateInfo);
+	bool isRenderingPoints(const VkGraphicsPipelineCreateInfo* pCreateInfo);
 
 	VkPipelineRasterizationStateCreateInfo _rasterInfo;
 	VkPipelineDepthStencilStateCreateInfo _depthStencilInfo;
