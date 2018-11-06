@@ -526,12 +526,6 @@ MVKMTLFunction MVKComputePipeline::getMTLFunction(const VkComputePipelineCreateI
 
     MVKPipelineLayout* layout = (MVKPipelineLayout*)pCreateInfo->layout;
     layout->populateShaderConverterContext(shaderContext);
-<<<<<<< HEAD
-=======
-    _auxBufferIndex = layout->getAuxBufferIndex();
-    uint32_t auxBufferSize = sizeof(uint32_t) * layout->getTextureCount();
-    shaderContext.options.auxBufferIndex = _auxBufferIndex.compute;
->>>>>>> Fix Travis build and rename MVKPipelineLayout::getMaxTextureIndex() to getTextureCount().
 
     MVKShaderModule* mvkShdrMod = (MVKShaderModule*)pSS->module;
     return mvkShdrMod->getMTLFunction(&shaderContext, pSS->pSpecializationInfo, _pipelineCache);
